@@ -3,7 +3,7 @@ from sqlalchemy import create_engine
 import os
 
 #assign directory
-directory = '/home/sakabuana31/training/create_data/source/'
+directory = '"#ignore"/home/sakabuana31/training/create_data/source/'
 for files in os.listdir(directory):
     file_path = os.path.join(directory,files)
     #create file name
