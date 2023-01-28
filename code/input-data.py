@@ -13,9 +13,6 @@ for files in os.listdir(directory):
         print(file_name)
         #create data framework
         df=pd.read_csv(file_path, sep=',')
-        #check column email
-        if('email') in df:
-            df['email'] = df['email'].apply(lambda x: x.split('@')[0])
         #create engine
         engine = create_engine('postgresql://postgres:postgres@localhost:5432/postgres')
         df.to_sql(file_name, engine, if_exists='replace')
